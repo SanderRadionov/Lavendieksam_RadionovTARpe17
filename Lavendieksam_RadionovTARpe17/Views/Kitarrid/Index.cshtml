@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.Mudel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Hind)
+            @Html.DisplayFor(modelItem => item.Hind)€
         </td>
         <td>
             @Html.ActionLink("Muuda", "Edit", new { id = item.Id }) |
@@ -38,3 +38,7 @@
 }
 
 </table>
+
+<div>
+Kõikide toodete hind kokku: @Model.Sum(i=>i.Hind)€
+</div>
