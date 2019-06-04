@@ -1,6 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("background.png");
+    background-size: cover; /*Katab terve lehe eelnevalt valitud pildiga.*/
+    background-attachment: fixed; /*Pilt ei liigu üles-alla kerides.*/
+    background-color:antiquewhite; /*Muudab taustavärvi*/
 }
 
 /* Set padding to keep content from hitting the edges */
