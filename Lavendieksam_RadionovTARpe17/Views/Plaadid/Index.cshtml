@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Lavendieksam_RadionovTARpe17.Models.Plaat>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Meie alandlik plaadivalik!";
 }
 
-<h2>Index</h2>
+<h2>Plaadid</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Lisa müüki", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Hind)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Muuda", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Osta", "Osta", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Kustuta", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

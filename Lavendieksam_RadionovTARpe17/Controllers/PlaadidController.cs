@@ -43,8 +43,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(plaat);
         }
 
-        // GET: Plaadid/Create
-        public ActionResult Create()
+		// GET: Plaadid/Create
+		[Authorize]
+		public ActionResult Create()
         {
             return View();
         }
@@ -113,8 +114,8 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(plaat);
         }
 
-        // POST: Plaadid/Delete/5
-        [HttpPost, ActionName("Delete")]
+		// POST: Plaadid/Delete/5
+		[HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
