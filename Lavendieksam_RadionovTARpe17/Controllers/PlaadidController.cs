@@ -44,7 +44,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
         }
 
 		// GET: Plaadid/Create
-		[Authorize]
+		[Authorize(Users = "admin@gmail.com")]
 		public ActionResult Create()
         {
             return View();
@@ -67,7 +67,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(plaat);
         }
 		// GET: Plaadid/Edit/5
-		[Authorize]
+		[Authorize(Users = "admin@gmail.com")]
 		public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,9 +98,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(plaat);
         }
 
-        // GET: Plaadid/Delete/5
-		[Authorize]
-        public ActionResult Delete(int? id)
+		// GET: Plaadid/Delete/5
+		[Authorize(Users = "admin@gmail.com")]
+		public ActionResult Delete(int? id)
         {
             if (id == null)
             {

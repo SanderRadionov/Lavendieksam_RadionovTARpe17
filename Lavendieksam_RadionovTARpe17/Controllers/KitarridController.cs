@@ -44,7 +44,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
         }
 
 		// GET: Kitarrid/Create
-		[Authorize]
+		[Authorize(Users ="admin@gmail.com")]
 		public ActionResult Create()
         {
             return View();
@@ -68,7 +68,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
         }
 
 		// GET: Kitarrid/Edit/5
-		[Authorize]
+		[Authorize(Users = "admin@gmail.com")]
 		public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -100,7 +100,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
         }
 
 		// GET: Kitarrid/Delete/5
-		[Authorize]
+		[Authorize(Users = "admin@gmail.com")]
 		public ActionResult Delete(int? id)
         {
             if (id == null)
