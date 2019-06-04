@@ -177,9 +177,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KitarridController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlaadidController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906040941541_InitialCreate.cs" />
+    <Compile Include="Migrations\201906040941541_InitialCreate.Designer.cs">
+      <DependentUpon>201906040941541_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kitarr.cs" />
@@ -249,6 +255,11 @@
     <Content Include="Views\Kitarrid\Details.cshtml" />
     <Content Include="Views\Kitarrid\Edit.cshtml" />
     <Content Include="Views\Kitarrid\Index.cshtml" />
+    <Content Include="Views\Plaadid\Create.cshtml" />
+    <Content Include="Views\Plaadid\Delete.cshtml" />
+    <Content Include="Views\Plaadid\Details.cshtml" />
+    <Content Include="Views\Plaadid\Edit.cshtml" />
+    <Content Include="Views\Plaadid\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -265,6 +276,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906040941541_InitialCreate.resx">
+      <DependentUpon>201906040941541_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

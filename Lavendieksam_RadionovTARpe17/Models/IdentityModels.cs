@@ -31,5 +31,7 @@ namespace Lavendieksam_RadionovTARpe17.Models
         }
 
 		public System.Data.Entity.DbSet<Lavendieksam_RadionovTARpe17.Models.Kitarr> Kitarrs { get; set; }
+
+		public System.Data.Entity.DbSet<Lavendieksam_RadionovTARpe17.Models.Plaat> Plaats { get; set; }
 	}
 }

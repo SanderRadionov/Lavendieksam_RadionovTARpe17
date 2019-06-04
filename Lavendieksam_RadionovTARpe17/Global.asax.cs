@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using Lavendieksam_RadionovTARpe17.Models;
 
 namespace Lavendieksam_RadionovTARpe17
 {
@@ -12,7 +14,8 @@ namespace Lavendieksam_RadionovTARpe17
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+			Database.SetInitializer<ApplicationDbContext>(null);
+			AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

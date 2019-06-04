@@ -1,0 +1,50 @@
+﻿@model Lavendieksam_RadionovTARpe17.Models.Plaat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Plaat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Žanr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Žanr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hind)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
