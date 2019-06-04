@@ -20,8 +20,16 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(db.Plaats.ToList());
         }
 
-        // GET: Plaadid/Details/5
-        public ActionResult Details(int? id)
+		public ActionResult Osta(int id)
+		{
+			Plaat plaat = db.Plaats.Find(id);
+			db.Plaats.Remove(plaat); /*Kustutab antud plaadi loetelust */
+			db.SaveChanges(); /*Salvestab muudatused*/
+			return RedirectToAction("Index"); /*Saadab tagasi /Plaadid lehele*/
+		}
+
+		// GET: Plaadid/Details/5
+		public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -57,9 +65,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
 
             return View(plaat);
         }
-
-        // GET: Plaadid/Edit/5
-        public ActionResult Edit(int? id)
+		// GET: Plaadid/Edit/5
+		[Authorize]
+		public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -90,6 +98,7 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
         }
 
         // GET: Plaadid/Delete/5
+		[Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

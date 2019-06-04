@@ -20,8 +20,16 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(db.Kitarrs.ToList());
         }
 
-        // GET: Kitarrid/Details/5
-        public ActionResult Details(int? id)
+		public ActionResult Osta(int id)
+		{
+			Kitarr kitarr = db.Kitarrs.Find(id); 
+			db.Kitarrs.Remove(kitarr); /*Kustutab antud kitarri loetelust */
+			db.SaveChanges(); /*Salvestab muudatused*/
+			return RedirectToAction("Index"); /*Saadab tagasi /Kitarrid lehele*/
+		}
+
+		// GET: Kitarrid/Details/5
+		public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -35,8 +43,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(kitarr);
         }
 
-        // GET: Kitarrid/Create
-        public ActionResult Create()
+		// GET: Kitarrid/Create
+		[Authorize]
+		public ActionResult Create()
         {
             return View();
         }
@@ -58,8 +67,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(kitarr);
         }
 
-        // GET: Kitarrid/Edit/5
-        public ActionResult Edit(int? id)
+		// GET: Kitarrid/Edit/5
+		[Authorize]
+		public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -89,8 +99,9 @@ namespace Lavendieksam_RadionovTARpe17.Controllers
             return View(kitarr);
         }
 
-        // GET: Kitarrid/Delete/5
-        public ActionResult Delete(int? id)
+		// GET: Kitarrid/Delete/5
+		[Authorize]
+		public ActionResult Delete(int? id)
         {
             if (id == null)
             {
