@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Lisa müüki", "Create")
 </p>
-<table class="table">
+<table class="hoverTable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Mudel)
@@ -39,6 +39,6 @@
 
 </table>
 
-<div>
-Kõikide toodete hind kokku: @Model.Sum(i=>i.Hind)€ 
-</div>
+<table class="hoverTable">
+    <tr><td>Kõikide toodete hind kokku: @Model.Sum(i => i.Hind)€</td></tr>
+</table>
